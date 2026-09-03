@@ -31,7 +31,7 @@ KEYWORDS = [
 ]
 
 # Your ntfy.sh topic - install the ntfy app and subscribe to this exact topic name
-NTFY_TOPIC = "sophia-hwfw-intern-x7k2p9"
+NTFY_TOPIC = "andres_hw_intern_or_co-op_abcd23"
 
 STATE_FILE = "state.json"
 BRANCHES_TO_TRY = ["main", "dev", "master"]
