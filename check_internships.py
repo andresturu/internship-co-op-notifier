@@ -7,7 +7,6 @@ from concurrent.futures import ThreadPoolExecutor
 # Repos to monitor (owner/repo)
 REPOS = [
     "sndsh404/summer-2027-internships",
-    "northwesternfintech/2027QuantInternships",
     "zapplyjobs/Research-Internships-for-Undergraduates",
     "acmalexandria/internships",
     "SimplifyJobs/Summer2026-Internships",
