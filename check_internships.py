@@ -115,10 +115,17 @@ def main():
             continue
 
         added = [r for r in rows if r not in old_rows]
+        print(f"{repo}: {len(added)} new row(s)")
 
         for row in added:
-            if matches_keywords(row):
-                send_notification(repo, row)
+            hit = matches_keywords(row)
+            print(f"  [{'MATCH' if hit else 'no match'}] {row[:120]}")
+            if hit:
+                try:
+                    send_notification(repo, row)
+                    print(f"    -> notification sent")
+                except Exception as e:
+                    print(f"    -> NOTIFY FAILED: {e}")
 
     with open(STATE_FILE, "w") as f:
         json.dump(new_state, f)
