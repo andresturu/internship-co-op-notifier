@@ -105,6 +105,7 @@ def main():
             continue
 
         rows = extract_rows(text)
+        print(f"{repo}: fetched {len(rows)} rows on branch {branch}")
         old_entry = state.get(repo)
         old_rows = set(old_entry["rows"] if isinstance(old_entry, dict) else old_entry or [])
         new_state[repo] = {"branch": branch, "rows": rows}
